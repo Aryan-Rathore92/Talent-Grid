@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import LineraEffcet from './components/Navbar/LineraEffcet'
-import {Home, Courses, Login, Result, About, Register} from './Pages/index.js'
+import {Home, Courses, Result, About} from './Pages/index.js'
+import { Register, Login } from './Forms/index.js'
 import {BrowserRouter, Route, Routes} from'react-router-dom';
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Navbar/>
+       <section id='section1'>
         <LineraEffcet/>
         <Routes>
           <Route path='/' element={<Home/>}/>
@@ -18,6 +20,7 @@ const App = () => {
           <Route path='/register' element={<Register/>}/>
           <Route path='/login' element={<Login/>}/>
         </Routes>
+       </section>
       </BrowserRouter>
     </>
   )

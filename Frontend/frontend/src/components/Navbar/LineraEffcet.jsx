@@ -1,6 +1,11 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 
 const LineraEffcet = () => {
+  const location = useLocation();
+  if (['/login', '/register'].includes(location.pathname)) {
+  return null;
+}
   return (
     <>
     <main className='pt-22'>
